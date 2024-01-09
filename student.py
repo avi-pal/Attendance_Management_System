@@ -65,9 +65,27 @@ class Student:
         f_lbl.place(x=35,y=220,width=620,height=130)
       
         #current course
-        Left_frame=LabelFrame(Left_frame,bd=2,bg="white",relief=RIDGE,text="Current course  information",font=("times new roman",12,"bold"))
-        Left_frame.place(x=35,y=225,width=650,height=170)
-        #Left_frame.place(x=10,y=10,width=760,height=580)
+        Current_course_frame=LabelFrame(Left_frame,bd=2,bg="white",relief=RIDGE,text="Current course  information",font=("times new roman",12,"bold"))
+        Current_course_frame.place(x=15,y=130,width=620,height=130)
+        #Current_course_frame.place(x=10,y=10,width=760,height=580)
+
+        #DEPARTMENT
+        dep_label=Label(Current_course_frame,text="Department",font=("times new roman",12,"bold"),bg="white")
+        dep_label.grid(row=0,column=0,sticky=W)
+
+        dep_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),width=17,state="read only")
+        dep_combo["values"]=("Select Department","Computer","IT","Civil","Mechanical","Electrical")
+        dep_combo.current(0)
+        dep_combo.grid(row=0,column=1,padx=2,pady=2,sticky=W)
+
+        #COURSE
+        course_label=Label(Current_course_frame,text="Course",font=("times new roman",12,"bold"),bg="white")
+        course_label_label.grid(row=0,column=2,sticky=W)
+
+        course_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),width=17,state="read only")
+        course_combo["values"]=("Select Course","EE","SE","TE","BE")
+        course_combo.current(0)
+        course_combo.grid(row=0,column=1,padx=2,pady=2,sticky=W)
 
 
         #Right label frame 
@@ -84,3 +102,4 @@ if __name__ == "__main__":
  root=Tk()
  obj = Student(root)
  root.mainloop()
+
