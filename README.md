@@ -28,3 +28,16 @@ CREATE TABLE `face_recognizer`.`student` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+
+===================================== Pyrhon Dependencies =============================
+
+Python Version - 3.9.13
+
+OpenCv / CV2:-
+pip install opencv-contrib-python
+
+mySql Connector for Python :-
+pip install mysql-connector-python
+
+Pillow:-
+pip install pillow
